@@ -84,17 +84,23 @@ li:hover ul{
 
 
 
+
 h1{
   font-size: 20px;
   color: white;
-
+  position: relative;
+  animation-name: h1;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-direction: reverse;
 }
 
-
-
-h1{
-  font-size: 20px;
-  color: white;
+@keyframes h1 {
+  0%   { left:0px; top:0px;}
+  25%  { left:400px; top:0px;}
+  50%  { left:-400px; top:0px;}
+  75%  { left:400px; top:0px;}
+  100% { left:0px; top:0px;}
 
 }
 

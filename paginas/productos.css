@@ -95,11 +95,11 @@ h1{
 }
 
 @keyframes h1 {
-  0%   { left:0px; top:0px;}
-  25%  { left:400px; top:0px;}
-  50%  { left:-400px; top:0px;}
-  75%  { left:400px; top:0px;}
-  100% { left:0px; top:0px;}
+  0%   { letter-spacing: 1px;}
+  25%  { letter-spacing: 2px;}
+  50%  { letter-spacing: 3px;}
+  75%  { letter-spacing: 2px;}
+  100% { letter-spacing: 1px;}
 
 }
 

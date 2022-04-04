@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Galeria</title>
+    <link rel="icon" type="image/x-icon" href="../galeria/Logo.png">
+    <link rel="stylesheet" type="text/css" href="contacto.css">
+    <link rel="stylesheet" type="text/css" href="../normalizecss.css">
+</head>
+<nav>
+    <div class="gridContainer">
+        <div class="navIzq">
+            <a href="../index.html" class="logo"><img src="../galeria/logo.png" alt="OuchDp imagen" width="100" height="50"></a>
+        </div>
+        <div class="nav-search-input">
+            <input type="text"  aria-label="Buscar productos" name="as_word" placeholder="Buscar productos" maxlength="200" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off">
+        </div>
+        <div class="registracion">
+            <a href= "acceder.html">Acceder</a>
+            <li> <a href= "registrarse.html">Registrarse</a>
+                  <ul>
+                    <li><a href="login.html">Log in</a></li>
+                    <li><a href="logout.html">Log out</a></li>
+                  </ul>
+                </li>
+            <a href= "usuario.html">Usuario</a>
+            <a href= "carrito">Carrito</a>
+        </div>
+    </div>
+        <div class="paginas">
+                 <a href="../index.html">Home</a>
+                 <a href="#">Productos</a>
+                 <a href="galeria.html">Galeria</a>
+                 <a href="contacto.html">Contactanos</a>
+                 <a href="pinterest.html">Pinterest</a>
+        </div>
+</nav> 
+<section>
+                  <div class="col-1">
+                     <div><h1>Contactanos !</h1></div>
+                  </div>
+                  <div class="col-2">
+                      <div>
+                  <form action="#">
+                  <label for="text">Decinos tu nombre:<br>
+                      <input type="text" placeholder="Escribe aqui" name="text"><br>
+                  </label>
+                  <label for="email">Decinos tu email:<br>
+                      <input type="email" placeholder="aaa@gmail.com" name="email"><br>
+                  </label><br>
+                  <input type="number" placeholder="Decinos tu edad"><br>
+                  <div><p>Por que producto consultas?</p>
+                      <div>Remeras
+                          <input type="radio" name="producto" value="remera">
+                      </div>
+                      <div>Tazas  
+                          <input type="radio" name="producto" value="tazas">
+                      </div>
+                      <div>Gorras
+                          <input type="radio" name="producto" value="gorras">
+                      </div>
+                      <div>Utiles
+                          <input type="radio" name="producto" value="utiles">
+                      </div>
+                      <div>Mates
+                          <input type="radio" name="producto" value="mates">
+                      </div>
+                      <div>llaveros
+                          <input type="radio" name="producto" value="llaveros">
+                      </div>
+                      <div>Bodys de bebe
+                          <input type="radio" name="producto" value="bodys">
+                      </div>
+                      <div>Accesorios y mas !
+                          <input type="radio" name="producto" value="accesorios">
+                      </div><br><br>
+                  </div>
+                  <label for="Observaciones"> Consulta:<br>
+                      <textarea placeholder="Indicanos tu consulta"></textarea>
+                  </label> <br>
+                  <br>
+                  <div>Queres suscribirte a nuestro newsletter?
+                  <input type="checkbox" name="acepta" value="1"></div><br>
+                  <input type="submit" value="ENVIAR CONSULTA">
+                  <input type="reset" value="RESETEAR">
+                </form>
+                </div>
+                </div>
+    </section>
+    <footer>
+        <h6>OuchDp ® | Todos los derechos reservados</h6>
+    </footer>
+</html>

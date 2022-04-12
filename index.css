@@ -7,9 +7,8 @@ html {
 *{margin: 0;padding: 0;}
 
 nav{
-  background: rgb(249,255,0);
-  background: linear-gradient(180deg, rgba(249,255,0,1) 0%, rgba(255,255,255,1) 57%, rgba(249,255,0,1) 63%);
-
+  background: rgb(42,228,226);
+  background: linear-gradient(360deg, rgba(42,228,226,1) 10%, rgba(215,255,0,1) 41%, rgba(248,255,181,1) 94%);
 
 }
 
@@ -42,8 +41,7 @@ nav{
 .paginas li{
 
   display: inline-grid; 
-  padding: 10px;
-  margin: 10px;
+
 } 
 
 
@@ -64,11 +62,11 @@ a {
 }
 
 a:hover {
-  background-color: skyblue;
+  background: rgb(42,228,226);
+  background: linear-gradient(360deg, rgba(42,228,226,1) 13%, rgba(215,255,0,0) 100%);
   border-radius: 6px;
   text-decoration: underline;
-
-  }
+}
 
 
 ul li:hover ul a:hover{
@@ -169,7 +167,7 @@ h1{
 
     display: grid;
     grid-template-columns: 320px;
-    grid-template-rows: 30px 30px 30px; 
+    grid-template-rows: 30px 30px 30px;   
     justify-content: space-around;
     align-items: center;
    }

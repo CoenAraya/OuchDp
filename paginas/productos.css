@@ -63,11 +63,9 @@ a {
 }
 
 a:hover {
-
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,255,0,1) 52%);
   border-radius: 6px;
-  text-decoration: underline;
-  background-color: lightblue;
-  }
+}
 
 
 
@@ -103,9 +101,7 @@ h1{
 
 }
 
-li{
-  list-style:none;
-}
+
 
 .titular{
 

@@ -1,6 +1,5 @@
 html {
   font-size:  62.5%;
-  font-family: Tahoma, Verdana, sans-serif;
   overflow: auto;
 }
 
@@ -9,7 +8,6 @@ html {
 nav{
   background: rgb(249,255,0);
   background: linear-gradient(180deg, rgba(249,255,0,1) 0%, rgba(255,255,255,1) 57%, rgba(249,255,0,1) 63%);
-
 }
 
 .gridContainer{
@@ -21,14 +19,6 @@ nav{
 
 
 
-.paginas{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px;
-}
-
-
 
 
 
@@ -38,18 +28,11 @@ nav{
 
 }
 
-.paginas li{
-
-  display: inline-grid; 
-  padding: 10px;
-  margin: 10px;
-} 
-
 
 .registracion {
 
   display: flex; 
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 } 
 
@@ -57,30 +40,15 @@ nav{
 
 a {
   text-decoration: none;
-  color: blue;
-  
-
 }
 
 a:hover {
-
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,255,0,1) 52%);
   border-radius: 6px;
-  text-decoration: underline;
-  background-color: lightblue;
-  }
-
-
-
-
-li ul  {
-
-  display: none;
 }
 
 
-li:hover ul{
-  display: block;
-}
+
 
 
 
@@ -123,54 +91,39 @@ h1{
 
 }
 
-.col-1{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px;
-  text-align: center;
-  align-items: center;
+.imgContacto{
+  top: 1000px;
+  left: 700px;
+  position: absolute;
+  animation-name: imgContacto;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  z-index: -1;
 }
 
-.col-2{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 478px;
-  text-align: center;
-  align-items: center;
+@keyframes imgContacto {
+  0%   {height: 0px; width: 0px ; left:0px; top:0px;}
+  100%  {left:700px; top:100px;}
+  
 }
-
 
 footer {
   text-align: center;
   letter-spacing: 3px;
-  position: absolute;
+  position: relative;
   background-color: royalblue;
   color: white;
   width: 100%;
   display: block;
   padding: 16px 0px;
-  
+  top: 192px;
 }
+
 
 @media screen and (max-width: 1024px) {
 
-
-.gridContainer{
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30px 30px 30px; 
-    justify-content: space-around;
-    align-items: center;
-   }
-
-
-.navIzq{
-  display: flex;
-  justify-content: center;
-}
-
-
-
+  .imgContacto {
+    display: none;
+  }
 
 

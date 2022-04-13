@@ -37,12 +37,7 @@ nav{
 
 }
 
-.paginas li{
 
-  display: inline-grid; 
-  padding: 10px;
-  margin: 10px;
-} 
 
 
 .registracion {
@@ -52,14 +47,6 @@ nav{
   align-items: center;
 } 
 
-
-
-a {
-  text-decoration: none;
-  color: blue;
-
-
-}
 
 a:hover {
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,255,0,1) 52%);
@@ -82,48 +69,11 @@ li:hover ul{
 
 h1{
   font-size: 20px;
-  color: white;
-  position: relative;
-  animation-name: h1;
-  animation-duration: 4s;
-  animation-delay: 0s;
-  animation-direction: reverse;
-  justify-items: center;
-}
-
-@keyframes h1 {
-  0%   { letter-spacing: 1px;}
-  25%  { letter-spacing: 2px;}
-  50%  { letter-spacing: 3px;}
-  75%  { letter-spacing: 2px;}
-  100% { letter-spacing: 1px;}
-
 }
 
 
 li{
   list-style:none;
-}
-
-
-h1{
-  font-size: 20px;
-  color: white;
-
-}
-
-li{
-  list-style:none;
-}
-
-.imagenes{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 15px;
-  background-color: lightblue;
-  align-items: center;
-  justify-content: space-evenly;
-
 }
 
 section{
@@ -131,23 +81,9 @@ section{
 }
 
 body{
-    background-color: lightblue;;
+    background-color: white;;
 }
 
-.imgCuadra{
-    padding: 3px;
-    border-radius: 10px;
-    transition: width 1s, height 1s, transform 1s, transform 1s;
-}
-
-.imgCuadra:hover{
-    width: 320px;
-    height: 320px;
-    transform: rotateZ(375deg);
-    border-style: groove;
-    box-decoration-break: 10px;
-    border-color: #003abd;
-}
 
 footer {
   text-align: center;
@@ -158,6 +94,12 @@ footer {
   width: 100%;
   display: block;
   padding: 16px 0px;
+  top: 609px;
   
 }
 
+
+.reparacion{
+    max-width: 900px;
+
+}

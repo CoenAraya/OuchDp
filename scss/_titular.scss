@@ -1,0 +1,33 @@
+@import "variables";
+
+.titular{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px; 
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    background-color: lightblue;
+    opacity: 1;
+    margin-top: 1px;
+    text-align: center;
+    align-self: center;
+    animation-name: h1;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-direction: reverse;
+    color: $color-text-primary
+}
+  
+  @keyframes h1 {
+    0%   { letter-spacing: 1px;}
+    25%  { letter-spacing: 2px;}
+    50%  { letter-spacing: 3px;}
+    75%  { letter-spacing: 2px;}
+    100% { letter-spacing: 1px;}
+  
+  }
+  
+  .reparacion{
+    text-align: center;
+  }

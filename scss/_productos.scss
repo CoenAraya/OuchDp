@@ -1,0 +1,73 @@
+@import "mixin";
+
+.grid{
+
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: 300px 300px ; 
+    background-color: lightblue;
+    opacity: 1;
+    align-self: space-between;
+
+}
+
+
+
+
+article img{
+  border-radius: 1363345345389px;
+}
+
+.imgCuadrilla{
+
+    transition: width 0.2s, height 0.2s, transform 0.4s;
+}
+
+.imgCuadrilla:hover{
+    width: 200px;
+    height: 200px;
+    transform: rotateZ(360deg);
+    border-radius: 5000px;
+}
+
+article div a:hover {
+  border-radius: 13689px;
+  padding: 0px;
+  text-decoration: underline;
+
+  }
+
+
+
+  .remeras {
+    @include bordes;
+  }
+  
+  .gorras {
+    @include bordes;
+  }
+  
+  .tazas {
+    @include bordes;
+  }
+  
+  .utiles {
+    @include bordes;
+  }
+  
+  .mates {
+    @include bordes;
+  }
+  
+  .llaveros {
+    @include bordes;
+  }
+  
+  
+  .bodys {
+    @include bordes;
+  }
+  
+  .accesorios {
+    @include bordes;
+  }

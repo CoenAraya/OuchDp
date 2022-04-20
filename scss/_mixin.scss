@@ -1,7 +1,7 @@
 @mixin bordes {
     text-align: center;
     align-self: center;
-    border-color: whitesmoke;
+    border-color: white;
     border-style: double;
     border-radius: 100px;  
   }
@@ -13,4 +13,6 @@
     color: white;
     letter-spacing: 0px;
     padding: 10px;
+    
   }
+  

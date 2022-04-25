@@ -7,4 +7,12 @@
     left: 730px;
     position: absolute;
   }
+
+@media screen and (max-width: 1024px) {
+
+    .imgContacto {
+      display: none;
+    }
   
+  
+  }

@@ -8,23 +8,24 @@ html {
 *{margin: 0;padding: 0;}
 
 body{
-	background-color: $total-page-color
+	background-color: $total-page-color;
+	min-height: 100vh;
+	position: relative;
 }
 
-nav{
-	background: $color-nav;
-}
+
 
 .gridContainer{
 
     display: grid;
     grid-template-columns: repeat(3 ,1fr) ;
     grid-template-rows: 50px; 
+	min-height: auto;
+	background: $color-nav;
 
 	.nav-search-input{
 		display: inline-grid;
 		align-content: center;
-	  
 	  }
 
 	  a:hover {
@@ -38,4 +39,12 @@ nav{
 		  padding-bottom: 10px;
 	  }
 
+	  .navbar-toggler {
+		  width: 8px;
+		  padding: 0px;
+		  border: none;
+	  }
+	  .navbar-toggler-icon{
+		  width: 15px;
+	  }
 }

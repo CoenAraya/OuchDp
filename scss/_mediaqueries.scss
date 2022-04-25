@@ -1,0 +1,97 @@
+/*Index.html*/
+
+@media screen and (max-width: 1240px) {
+
+
+
+
+    .gridHome{
+    
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 0px 60px 0px 300px 220px 300px; 
+        
+    
+    }
+    
+    .imgBlock{
+    padding-top: 50px;
+    height: 210px;
+    width: 250px;
+    margin: 0px;
+      
+    }
+}
+
+/*Productos.html*/
+
+@media screen and (max-width: 1024px) {
+
+    .gridGalery{
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 160px 160px 160px 160px 160px 160px 160px 160px ; 
+        background-color: lightblue;
+        opacity: 1;
+        border-style: none;
+      }
+    
+   
+    .imgCuadrilla{
+    
+      height: 120px;
+      width: 120px;
+      transition: width 1s, height 1s, transform 1s, transform 1s;
+    }
+    
+    .imgCuadrilla:hover{
+        transform: rotateZ(360deg);
+        border-radius: 5000px;
+        height: 120px;
+        width: 120px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .gridContainer{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 30px 50px; 
+        justify-items: center;
+        
+    
+        .nav-search-input{
+            
+            align-content: center;
+          }
+    
+          a:hover {
+            background: $color-select;
+            border-radius: 6px;
+         
+          }
+          .logo{
+              display: inline-grid;
+              align-content: center;
+              justify-items: center;
+              padding-bottom: 10px;
+             
+          }
+
+        .navbar {
+              z-index: 4;
+              display: block;
+              opacity: 0.9;
+              justify-self: stretch;
+            }
+        .dropdown{
+
+            background-color: rgba(249,255,0,1);
+        }
+        }
+          
+}

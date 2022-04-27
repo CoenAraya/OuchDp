@@ -381,7 +381,8 @@ template {
   justify-content: center;
   text-align: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  padding: 5px; }
 
 .tabla__txtizq {
   font-size: 20px;

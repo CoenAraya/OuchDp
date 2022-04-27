@@ -7,7 +7,6 @@
     grid-template-rows: 100px; 
     grid-column-gap: 10px;
     grid-row-gap: 15px;
-    background-color: lightblue;
     opacity: 1;
     margin-top: 1px;
     text-align: center;
@@ -17,7 +16,7 @@
     animation-delay: 0s;
     animation-direction: reverse;
     color: $color-text-primary;
-    z-index: -1;
+    
     
 }
   

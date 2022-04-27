@@ -355,7 +355,8 @@ template {
   animation-duration: 4s;
   animation-delay: 0s;
   animation-direction: reverse;
-  color: white; }
+  color: white;
+  z-index: -1; }
 
 @keyframes h1 {
   0% {
@@ -570,7 +571,7 @@ article div a:hover {
       justify-self: stretch; }
     .gridContainer .dropdown {
       background-color: #f9ff00;
-      border-radius: 10px; } }
+      border-radius: 5px; } }
 
 /*footer*/
 footer {

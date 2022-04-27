@@ -16,7 +16,9 @@
     animation-duration: 4s;
     animation-delay: 0s;
     animation-direction: reverse;
-    color: $color-text-primary
+    color: $color-text-primary;
+    z-index: -1;
+    
 }
   
   @keyframes h1 {

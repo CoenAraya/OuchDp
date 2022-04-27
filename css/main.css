@@ -570,7 +570,9 @@ article div a:hover {
       justify-self: stretch; }
     .gridContainer .dropdown {
       background-color: #f9ff00;
-      border-radius: 5px; } }
+      border-radius: 5px; }
+    .gridContainer .nav-item {
+      padding-left: 40px; } }
 
 /*footer*/
 footer {

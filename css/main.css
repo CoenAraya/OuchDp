@@ -24,10 +24,7 @@ body {
     background: linear-gradient(180deg, white 22%, #feff00 49%);
     border-radius: 6px; }
   .gridContainer .logo {
-    display: inline-grid;
-    align-content: center;
-    justify-items: center;
-    padding-bottom: 10px; }
+    width: 100px; }
   .gridContainer .navbar-toggler {
     width: 8px;
     padding: 0px;
@@ -486,34 +483,44 @@ article div a:hover {
 .imagenes {
   display: flex;
   flex-wrap: wrap;
-  padding: 15px;
+  row-gap: 30px;
   align-items: center;
   justify-content: space-evenly; }
 
 .imgCuadra {
   padding: 3px;
   border-radius: 10px;
-  transition: width 1s, height 1s, transform 1s, transform 1s; }
+  transition: width 0.5s, height 0.5s; }
 
 .imgCuadra:hover {
   width: 320px;
   height: 320px;
-  transform: rotateZ(375deg);
   border-style: groove;
   box-decoration-break: 10px;
   border-color: #003abd; }
 
 .formulario {
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  justify-content: space-around; }
 
-.imgContacto {
-  top: 150px;
-  left: 730px;
-  position: absolute; }
+.SendBottom {
+  text-align: center;
+  padding: 20px; }
 
-@media screen and (max-width: 1024px) {
-  .imgContacto {
-    display: none; } }
+/*footer*/
+footer {
+  text-align: center;
+  letter-spacing: 3px;
+  position: absolute;
+  background: #5487b1;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  bottom: 0;
+  letter-spacing: 2px; }
 
 /*MediaQueries*/
 /*Index.html*/
@@ -547,11 +554,12 @@ article div a:hover {
     height: 120px;
     width: 120px; } }
 
+/* Navegador*/
 @media screen and (max-width: 1024px) {
   .gridContainer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 30px 30px 50px;
+    grid-template-rows: 50px 30px 50px;
     justify-items: center; }
     .gridContainer .nav-search-input {
       align-content: center; }
@@ -574,14 +582,7 @@ article div a:hover {
     .gridContainer .nav-item {
       padding-left: 40px; } }
 
-/*footer*/
-footer {
-  text-align: center;
-  letter-spacing: 3px;
-  position: absolute;
-  background: #5487b1;
-  color: white;
-  width: 100%;
-  padding: 10px;
-  bottom: 0;
-  letter-spacing: 2px; }
+/* Navegador*/
+@media screen and (max-width: 700px) {
+  .imgContacto {
+    display: none; } }

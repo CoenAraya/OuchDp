@@ -1,7 +1,7 @@
 .imagenes{
     display: flex;
     flex-wrap: wrap;
-    padding: 15px;
+    row-gap: 30px;
     align-items: center;
     justify-content: space-evenly;
   
@@ -10,13 +10,13 @@
 .imgCuadra{
     padding: 3px;
     border-radius: 10px;
-    transition: width 1s, height 1s, transform 1s, transform 1s;
+    transition: width 0.5s, height 0.5s;
+    
 }
 
 .imgCuadra:hover{
     width: 320px;
     height: 320px;
-    transform: rotateZ(375deg);
     border-style: groove;
     box-decoration-break: 10px;
     border-color: #003abd;

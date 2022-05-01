@@ -1,18 +1,14 @@
 .formulario{
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    justify-content: space-around;
+
 }
 
-.imgContacto{
-    top: 150px;
-    left: 730px;
-    position: absolute;
-  }
 
-@media screen and (max-width: 1024px) {
-
-    .imgContacto {
-      display: none;
-    }
-  
-  
-  }
+.SendBottom{
+    text-align: center;
+    padding: 20px;
+}

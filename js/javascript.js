@@ -15,18 +15,7 @@ while (prompt(`${nombre} deseas agregar algo mas? si/no`) == "si"){
 
 
 let i = 1
-if (prompt(`${nombre} tenes que abonar un total de ` + precio + `$. Queres abonarlo en cuotas?`).toLowerCase() == `si`) {
-    while (i <= 12 ){
-        let difCuotas = parseInt(precio / i)
-        alert(`${i} cuotas de ${difCuotas}` )
-        i++;
-    }
-    let cuotasCant = prompt(`En cuantas cuotas deseas realizarlo?`)    
-    alert(`Puedes realizarlo en ${cuotasCant} cuotas de ` + precio / cuotasCant + `$`)
-}
-else {
-    alert(`Deberas abonar un total de ${precio}$ en efectivo`);
-}
+
 
 
 

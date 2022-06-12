@@ -1,3 +1,4 @@
+//objetos//
 
 class Producto {
     constructor (id,tipo, precio){
@@ -18,17 +19,24 @@ const productos = [
 
 const nombre = prompt(`Indicanos tu nombre `)
 
-console.log(`hola ${nombre} pasamos a comentarte nuestro stock`)
+console.log(`Hola ${nombre} ! pasamos a comentarte nuestro stock`)
 
 for (const muestrario of productos) {
     muestrario.precios()
 }
 
+
+//inicio de la aplicacion//
+
+
 const carrito =  [];
 
 let seguirComprando = "si"
 
-while (seguirComprando == "si"){
+let precioTotal = 0
+
+
+while (seguirComprando.toLowerCase() == "si"){
     let pregunta = Number(prompt(`${nombre} que producto quisieras llevar? 1: gorras, 2: remeras, 3: tazas`))
         if (pregunta == 1) {
         let cantidad = Number( prompt(`Cuantas gorras vas a llevar Juan?, recorda que llevando 10 o mas, tenes un 10% de descuento en el total de la compra`))
@@ -53,22 +61,51 @@ while (seguirComprando == "si"){
             }
             console.log(`${nombre} se agregaron ${cantidad} tazas a tu carrito`)
         
-    }
+    } else {
 
-    seguirComprando = prompt(`Deseas seguir comprando?`)
+        alert(`${nombre} no tenemos productos con ese numero.`)
+    }
+    
+    seguirComprando = prompt(`Deseas seguir comprando? si/no`)
     
 }
 
-let cuotas = prompt (`${nombre} debes de abonar un total de` + sumaTotal() + `¿Queres abonarlo en cuotas? 1: si, 2:no`)
+if(carrito.length >=10){
+    calcularTotal()
+    precioTotal = precioTotal * 0.9
+    
+    alert(`Ya que tenes un total de ${carrito.length} productos se te aplicara el 10% de descuento en el total de tu compra !`)
+} else {
+    calcularTotal()
+}
+
+if (prompt (`${nombre} debes de abonar un total de ${precioTotal} ¿Queres abonarlo en cuotas? si/no`).toLowerCase() == `si`) {
+    i = 1    
+
+    while (i <= 12 ){
+        let difCuotas = parseInt(precioTotal / i)
+        alert(`${i} cuotas de ${difCuotas}$` )
+        i++;
+    }
+    let cuotasCant = prompt(`En cuantas cuotas deseas realizarlo?`)    
+    alert(`Debes abonar un total de ${cuotasCant} cuotas de ` + precioTotal / cuotasCant + `$`)
+}
+else {
+    alert(`Deberas abonar un total de ${precioTotal}$ en efectivo, gracias por tu compra !`);
+}
+
+function calcularTotal() {
 
 
-const sumaTotal = (valorEfectivo) =>{
-    valorEfectivo = valorEfectivo + valorEfectivo
+    carrito.forEach ((valorEfectivo) =>{
 
-
+        precioTotal += valorEfectivo.precio
+        
+    })
+console.log(precioTotal)
 }
 
 
-    for (const valorCarrito of carrito){
-      sumaTotal(carrito[valorCarrito][0])
-}
+//     for (const valorCarrito of carrito){
+//       sumaTotal(carrito[valorCarrito][0])
+// }

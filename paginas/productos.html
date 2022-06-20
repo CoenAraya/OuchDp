@@ -7,9 +7,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="../galeria/Logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
     <meta name="description" content="Empresa de venta de articulos personalizados por mayor y menor.">
     <meta name="keywords" content="HTML, JS, personalizados, articulos, ventas">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script defer src="../js/modal.js"></script>
+    <script defer src="../js/stockProductos.js"></script>
+    <script defer src="../js/carrito.js"></script>
 	<title>Productos</title>
 </head>
 <body>
@@ -56,8 +62,8 @@
                         <a class="nav-link" href="contacto.html" > Contacto</a>
                       </li>
                       <div class="dropdown-divider"></div>
-                    <li class="nav-item">
-                        <a class="nav-link" href="enReparacion.html" > Carrito</a>
+                    <li class="nav-item ">
+                        <button id="boton-carrito" class="colorCarrito"><i class="fas fa-shopping-cart btn btn-primary colorCarrito"></i><span id="contadorCarrito">0</span></button>
                     </li>
                 </ul>
             </div>
@@ -69,39 +75,32 @@
     <div class="titular">
         <h1>Descubre nuestros productos !</h1>
     </div>
-    <div class="gridGalery" data-aos="zoom-in" data-aos-offset="100" data-aos-easing="ease-in-sine">
-	    <div class="remeras">
-    	    <img class="remeras imgCuadrilla"  src="../galeria/remera.jpg" width="300" height="200">
-        <div><a href="#">Estampado de remeras</a></div>
-        </div>
-        <div class="tazas">
-		    <img class="tazas imgCuadrilla" src="../galeria/taza.jpg" width="300" height="200"><div><a href="enReparacion.html">Sublimado de tazas</a></div>
-        </div>
-        <div class="gorras">
-            <img class="gorras imgCuadrilla" src="../galeria/gorra.jpg" width="300" height="200"><div><a href="enReparacion.html">Gorras personalizadas</a></div>
-         </div>
-         <div class="mates">
-	       	<img class="mates imgCuadrilla" src="../galeria/mates.jpg" width="300" height="200"><div><a href="enReparacion.html">Mate personalizados</a></div>
-         </div>
-         <div class="utiles">
-		    <img class="utiles imgCuadrilla" src="../galeria/utiles.jpg" width="300" height="200"><div><a href="enReparacion.html">Utiles personalizados</a></div>
-         </div>
-         <div class="llaveros">
-	       	<img class="llaveros imgCuadrilla" src="../galeria/llaveros.jpg" width="300" height="200"><div><a href="enReparacion.html">Llaveros personalizados</a></div>
-         </div>
-        <div class="bodys">
-	   	   <img class="bodys imgCuadrilla"  src="../galeria/bodys.jpg" width="300" height="200"><div><a href="enReparacion.html">Estampado de bodys de bebe</a></div>
-     </div>
-     <div class="accesorios">
-        <img class="accesorios imgCuadrilla" src="../galeria/accesorios.jpg" width="300" height="200"><div><a href="enReparacion.html">Accesorios y mas !</a></div>
-        </div>
+    <div class="gridGalery" data-aos="zoom-in" data-aos-offset="100" data-aos-easing="ease-in-sine" id="stockMercado">
+	    <!-- Aca se agregan los productos que haya en stockProductos </div> -->
     </div>
 </article>  
+<div class="modal-contenedor">
+    <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <p class="recordarDesc">Recorda que llevando 10 productos o más, se te realizara un descuento del 10% en el total de tu compra</p>
+        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor">
+
+            <!-- <div class="productoEnCarrito">
+                <p>Buzo 1</p>
+                <p>Precio: $1200</p>
+                <button class="boton-eliminar"><i class="bi bi-backspace-fill"></i></button>
+            </div> -->
+
+        </div>
+        <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+        <button id="vaciarCarrito" class="vaciarCarrito">Vaciar carrito</button>
+    </div>
+</div>
     <footer>
         <h6>OuchDp ® | Todos los derechos reservados</h6>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
           AOS.init();

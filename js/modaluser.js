@@ -1,3 +1,5 @@
+//Modal para loguear usuario//
+
 const clickModal = document.getElementById('abrirUser')
 const clickEnviar = document.getElementById('cerrarModal')
 const activarModal = document.getElementById('modalusuario')

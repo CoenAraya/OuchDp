@@ -24,5 +24,45 @@
   @include cartas;
 }
 
+.users{
+  
+  
+  
+  
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  transition: all .5s;
+  flex-direction: column;
+  
+}
+
+.users-active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.bloqueUsuario{
 
 
+
+
+
+  text-align: center;
+  transition: all .5s;
+  
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  width: auto;
+
+}

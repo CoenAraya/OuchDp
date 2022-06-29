@@ -1,9 +1,11 @@
 
 
-const productosContainer = document.querySelector("#stockMercado")
+
 const carritoContenedor = document.querySelector("#carrito-contenedor")
+
 const contadorCarrito = document.querySelector('#contadorCarrito')
 const precioTotal = document.querySelector('#precioTotal')
+
 const btnVaciar = document.getElementById('vaciarCarrito')
 
 
@@ -13,43 +15,19 @@ let productosCarrito
 const carritoMemoria = JSON.parse(localStorage.getItem('memoriaCarrito'))
 //RENDER DE MI STOCK//
 
-stockProductos.forEach((producto) =>{
-    const div = document.createElement('div')
-    div.classList.add('estiloProductos')
 
-    div.innerHTML = `
-    
-                    <div class= "articulos">
-    	            <img class="articulos imgCuadrilla"  src=${producto.img} width="200" height="200">
-                    <div class="productosStock">Estampado de ${producto.nombre}</div>
-                    <button onclick="agregarAlCarrito(${producto.id})" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-                    
-    `
-    
-    
-    
-    
-    stockMercado.append(div)
-    
-})
 
 
 //FUNCIONES A APLICAR//
 
 const agregarAlCarrito = (id) => {
-    if (localStorage.getItem('registroNombre')) {
     const item = stockProductos.find((producto) => producto.id === id)
     productosCarrito.push(item)
     localStorage.setItem('memoriaCarrito', JSON.stringify(productosCarrito))
     renderCarrito()
     renderCantidad()
     renderTotal()
-}else {
-    alert("Logueate !")
 }
-}
-
-console.log(localStorage.getItem('registroNombre'))
 
 const quitarCarrito = (id) => {
     const item = productosCarrito.find((producto) => producto.id === id)

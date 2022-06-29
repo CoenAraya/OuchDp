@@ -15,10 +15,11 @@
     }
     
     .imgBlock{
-    padding-top: 50px;
+    
     height: 210px;
     width: 250px;
     margin: 0px;
+    
       
     }
 }
@@ -75,12 +76,19 @@
          
           }
           .logo{
-              display: inline-grid;
-              align-content: center;
-              justify-items: center;
+              
+              align-items:start ;
+              justify-items: start;
               padding-bottom: 10px;
+              
              
           }
+        .saludoNav{
+
+          justify-items: start;
+        }
+
+       
 
         .navbar {
               z-index: 4;
@@ -109,5 +117,9 @@
   
   .imgContacto{
     display: none;
+  }
+
+  .logoPage{
+    width: 300px;
   }
 }

@@ -25,10 +25,6 @@
 }
 
 .users{
-  
-  
-  
-  
   background-color: yellow;
   position: fixed;
   top: 0;
@@ -36,12 +32,13 @@
   height: 100vh;
   visibility: hidden;
   opacity: 0;
-  z-index: 1;
+  z-index: 5;
   display: flex;
   justify-content:center;
   align-items: center;
   transition: all .5s;
   flex-direction: column;
+
   
 }
 
@@ -52,10 +49,6 @@
 
 .bloqueUsuario{
 
-
-
-
-
   text-align: center;
   transition: all .5s;
   
@@ -65,4 +58,12 @@ button {
   background-color: rgb(255, 255, 255);
   width: auto;
 
+}
+
+.imgBlock {
+
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
+  
+  
+  
 }

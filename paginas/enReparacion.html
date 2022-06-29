@@ -10,14 +10,21 @@
     <link rel="icon" type="image/x-icon" href="../galeria/Logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <script defer src="../js/modal.js"></script>
+    <script defer src="../js/stockProductos.js"></script>
+    <script defer src="../js/carritoFuera.js"></script>
+    <script defer src="../js/modaluser.js"></script>
     <title>Ouch Dp</title>
 </head>
 <body>
 <nav>
     <div class="gridContainer">
+      <div id="nameOnNav" class="saludoNav">
         <div>
-            <a href="../index.html" class="logo"><img src="../galeria/logo.png" alt="OuchDp imagen" width="110" height="60"  class="d-inline-block align-top" alt=""></a>
+        <a href="../index.html" class="logo"><img src="../galeria/logo.png" alt="OuchDp imagen" width="110" height="60" class="d-inline-block align-top" alt=""></a>
         </div>
+    </div>
         <div class="nav-search-input">
             <input type="text"  aria-label="Buscar productos" name="as_word" placeholder="Buscar productos" maxlength="200" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off">
         </div>
@@ -33,10 +40,9 @@
                         Acceder
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="enReparacion.html">Log in</a>
-                        <a class="dropdown-item" href="enReparacion.html">Registrarse</a>
+                        <button id="abrirUser" class="bottonUser"><a class="dropdown-item">Log in</a></button>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="enReparacion.html">Log Out</a>
+                        <button id="deslogueo" class="bottonUser"><a class="dropdown-item">Log Out</a></button>
                       </div>
                     </li>
                     <div class="dropdown-divider"></div>
@@ -56,9 +62,9 @@
                         <a class="nav-link" href="contacto.html" > Contacto</a>
                       </li>
                       <div class="dropdown-divider"></div>
-                    <li class="nav-item">
-                        <a class="nav-link" href="enReparacion.html" > Carrito</a>
-                    </li>
+                      <li class="nav-item ">
+                        <button id="boton-carrito" class="colorCarrito"><i class="fas fa-shopping-cart btn btn-primary colorCarrito"></i><span id="contadorCarrito">0</span></button>
+                      </li>
                   </ul>
             </div>
             </div>
@@ -71,10 +77,38 @@
         <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
         </div>
+    <div class="users" id="modalusuario">
+      <div class="bloqueUsuario " id="propagar">
+        <form>
+            <p class="alert alert-primary">Crear Usuario </p>
+            <input type="text" placeholder="Ingresa tu usuario" id="nombreUsuario">
+            <input type="password" placeholder="Ingresa tu contraseña" id="contrasenia">
+            <button type="button" value="Registrar" id="enviarRegistro">Enviar</button>
+        </form>
+      </div>
+    </div>
     </h4>
     <img class="reparacion" src="../galeria/enReparacion.png" style="width:40%" data-aos="fade-up">
     </div>    
 </section>
+<div class="modal-contenedor">
+  <div class="modal-carrito">
+      <h3>Carrito</h3>
+      <p class="alert alert-primary">Recorda que llevando 10 productos o más, se te realizara un descuento del 10% en el total de tu compra</p>
+      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+      <div id="carrito-contenedor">
+
+          <!-- <div class="productoEnCarrito">
+              <p>Buzo 1</p>
+              <p>Precio: $1200</p>
+              <button class="boton-eliminar"><i class="bi bi-backspace-fill"></i></button>
+          </div> -->
+
+      </div>
+      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+      <button id="vaciarCarrito" class="vaciarCarrito">Vaciar carrito</button>
+  </div>
+</div>
 <footer>
              <h6>OuchDp ® | Todos los derechos reservados</h6>
 </footer>

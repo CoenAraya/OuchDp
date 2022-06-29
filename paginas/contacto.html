@@ -10,6 +10,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="description" content="Empresa de venta de articulos personalizados">
   <meta name="keywords" content="HTML, JS, personalizados, articulos, ventas">
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+  <script defer src="../js/modal.js"></script>
+  <script defer src="../js/stockProductos.js"></script>
+  <script defer src="../js/carritoFuera.js"></script>
+  <script defer src="../js/modaluser.js"></script>
+  <script defer src="../js/contacto.js"></script>
+
+    
 	<title>Contacto</title>
 </head>
 
@@ -17,9 +25,11 @@
 
 <nav>
     <div class="gridContainer">
+      <div id="nameOnNav" class="saludoNav">
         <div>
-            <a href="../index.html" class="logo"><img src="../galeria/logo.png" alt="OuchDp imagen" width="110" height="60" class="d-inline-block align-top" alt=""></a>
+        <a href="../index.html" class="logo"><img src="../galeria/logo.png" alt="OuchDp imagen" width="110" height="60" class="d-inline-block align-top" alt=""></a>
         </div>
+    </div>
         <div class="nav-search-input">
             <input type="text"  aria-label="Buscar productos" name="as_word" placeholder="Buscar productos" maxlength="200" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off">
         </div>
@@ -35,10 +45,9 @@
                     Acceder
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="enReparacion.html">Log in</a>
-                    <a class="dropdown-item" href="enReparacion.html">Registrarse</a>
+                    <button id="abrirUser" class="bottonUser"><a class="dropdown-item">Log in</a></button>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="enReparacion.html">Log Out</a>
+                    <button id="deslogueo" class="bottonUser"><a class="dropdown-item">Log Out</a></button>
                   </div>
                 </li>
                 <div class="dropdown-divider"></div>
@@ -58,8 +67,8 @@
                     <a class="nav-link" href="contacto.html" > Contacto</a>
                   </li>
                   <div class="dropdown-divider"></div>
-                <li class="nav-item">
-                    <a class="nav-link" href="enReparacion.html" > Carrito</a>
+                  <li class="nav-item ">
+                    <button id="boton-carrito" class="colorCarrito"><i class="fas fa-shopping-cart btn btn-primary colorCarrito"></i><span id="contadorCarrito">0</span></button>
                 </li>
               </ul>
             </div>
@@ -72,33 +81,61 @@
           <div class="titular">
             <h1>Contactanos!</h1>
           </div>
+          <div class="users" id="modalusuario">
+            <div class="bloqueUsuario " id="propagar">
+              <form>
+                  <p class="alert alert-primary">Crear Usuario </p>
+                  <input type="text" placeholder="Ingresa tu usuario" id="nombreUsuario">
+                  <input type="password" placeholder="Ingresa tu contraseña" id="contrasenia">
+                  <button type="button" value="Registrar" id="enviarRegistro">Enviar</button>
+              </form>
+            </div>
+          </div>
           <form>
             <div class="formulario">
               <div class="form-group col-md-6" data-aos="zoom-out-right">
-                <label for="nombre">Indicanos tu nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre...">
+                <label for="nombreConsulta">Indicanos tu nombre</label>
+                <input type="text" class="form-control" id="nombreConsulta" name="nombreConsulta" placeholder="Nombre...">
               </div>
               <div class="form-group col-md-6" data-aos="zoom-out-right">
-                <label for="inputEmail">Indicanos tu mail</label>
-                <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Mail@...">
+                <label for="mailConsulta">Indicanos tu mail</label>
+                <input type="email" class="form-control" id="mailConsulta" name="mailConsulta" placeholder="Mail@...">
               </div>
               <div class="form-group col-md-6" data-aos="zoom-out-right">
-                <label for="consulta">Dejanos tu consulta</label>
-                <textarea class="form-control" id="consulta" name="consulta" rows="3" placeholder="Dejanos tu consulta..."></textarea>
+                <label for="consultaConsulta">Dejanos tu consulta</label>
+                <textarea class="form-control" id="consultaConsulta" name="consultaConsulta" rows="3" placeholder="Dejanos tu consulta..."></textarea>
               </div>
             </div>
             <div class="SendBottom">
             <img class="imgContacto" src="../galeria/Contactanos.jpg" width="500" height="200" data-aos="zoom-out-left">  
               <div>Queres suscribirte a nuestro newsletter?
                 <input type="checkbox" name="acepta" value="1"></div><br>
-                <input type="submit" value="ENVIAR CONSULTA">
-                <input type="reset" value="RESETEAR">
+                <button type="button" value="consultarValor" id="enviarConsulta">Enviar</button>
+                <button type="reset" value="RESETEAR">Resetear</button>
             </div>
           </form>
             
         
           
 </section>
+<div class="modal-contenedor">
+  <div class="modal-carrito">
+      <h3>Carrito</h3>
+      <p class="alert alert-primary">Recorda que llevando 10 productos o más, se te realizara un descuento del 10% en el total de tu compra</p>
+      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+      <div id="carrito-contenedor">
+
+          <!-- <div class="productoEnCarrito">
+              <p>Buzo 1</p>
+              <p>Precio: $1200</p>
+              <button class="boton-eliminar"><i class="bi bi-backspace-fill"></i></button>
+          </div> -->
+
+      </div>
+      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+      <button id="vaciarCarrito" class="vaciarCarrito">Vaciar carrito</button>
+  </div>
+</div>
 
 <footer>
         <h6>OuchDp ® | Todos los derechos reservados</h6>

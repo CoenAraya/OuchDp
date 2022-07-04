@@ -6,7 +6,7 @@ const contadorCarrito = document.querySelector('#contadorCarrito')
 const precioTotal = document.querySelector('#precioTotal')
 const btnVaciar = document.getElementById('vaciarCarrito')
 
-//OPERADOR LOGICO OR//
+//operador avanzado //
 const productosCarrito = JSON.parse(localStorage.getItem('carritoMemoria')) || []
 
 

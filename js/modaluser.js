@@ -24,7 +24,7 @@ propagarOff.addEventListener('click', (event)=>{
 })
 
 vaciarLogueo.addEventListener('click', () => {
-
+    
     localStorage.clear()
     window.location.reload()
     

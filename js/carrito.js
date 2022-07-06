@@ -43,26 +43,56 @@ const agregarAlCarrito = (id) => {
 
     //operador avanzado //
     productosCarrito.find((producto) => producto.id == id) ? item.cantidad++ : productosCarrito.push(item)
-    
-
-    
     localStorage.setItem('carritoMemoria', JSON.stringify(productosCarrito))
+    
+    Toastify({
+        text: "Producto agregado al carrito !",
+        backgroundColor: '#eddc3d',
+        color: '#610f6a',
+        offset: {
+        
+          x: 500, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+          y: 580 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+      }).showToast();
+
     renderCarrito()
     renderCantidad()
     renderTotal()
 }else {
-    alert("Logueate !")
+    Swal.fire({
+            
+        title:'Debes loguearte para comprar',
+        backdrop: `rgba(0,0,123,0.4)`,
+        background: '#eddc3d',
+        color: '#610f6a',
+
+    
+    
+    })
 }
 }
 
-console.log(localStorage.getItem('registroNombre'))
+
 
 const quitarCarrito = (id) => {
     const item = productosCarrito.find((producto) => producto.id === id)
     const indice = productosCarrito.indexOf(item)
+    item.cantidad = 1
     productosCarrito.splice(indice,1)
-    
     localStorage.setItem('carritoMemoria', JSON.stringify(productosCarrito))
+    
+    Toastify({
+        text: "Producto eliminado.",
+        duration: 3000,
+        gravity: "bottom",
+        position: `right`,
+        stopOnFocus: true, 
+        style: {
+          background: "red",
+        }
+      }).showToast();
+
     renderCarrito()
     renderCantidad()
     renderTotal()
@@ -70,8 +100,24 @@ const quitarCarrito = (id) => {
 
 const vaciarCarrito = () => {
     productosCarrito.length = 0
+    stockProductos.forEach((item) =>{
+        item.cantidad = 1
+        }
     
+    )
     localStorage.setItem('carritoMemoria', JSON.stringify(productosCarrito))
+    
+    Toastify({
+        text: "Carrito vaciado con exito.",
+        duration: 3000,
+        gravity: "bottom",
+        position: `right`,
+        stopOnFocus: true, 
+        style: {
+          background: "red",
+        }
+      }).showToast();
+
     renderCarrito()
     renderCantidad()
     renderTotal()

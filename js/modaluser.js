@@ -24,12 +24,40 @@ propagarOff.addEventListener('click', (event)=>{
 })
 
 vaciarLogueo.addEventListener('click', () => {
-    
-    localStorage.clear()
-    window.location.reload()
-    
+    if(localStorage.getItem('registroNombre')){
+    Swal.fire({
+        title: 'Seguro deseas desloguearte?',
+        text: "Esta accion borrara los productos de tu carrito !",
+        showCancelButton: true,
+        imageUrl:'../galeria/logo.png',
+        imageHeight: 300,
+        confirmButtonColor: 'rgba(130,150,90,9)',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, hasta luego !',
+        cancelButtonText: 'Cancelar',
+        backdrop: `rgba(0,0,123,0.4)`,
+            background: '#eddc3d',
+            color: '#610f6a',
+      }).then((result) => {
+        if (result.isConfirmed) {
+            cargaBorra()
+                  
+      }
+})
+    }else {
+        Swal.fire({
+            
+            title:'No estas logueado',
+            backdrop: `rgba(0,0,123,0.4)`,
+            background: '#eddc3d',
+            color: '#610f6a',
+
+        
+        
+        })
+
     }
-)
+})
 
 
 
@@ -80,5 +108,8 @@ const nombreBarra = document.getElementById('nameOnNav')
 
 
  
-
+const cargaBorra = ()=> {
+    localStorage.clear() 
+    window.location.reload()
+}
 

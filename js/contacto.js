@@ -1,8 +1,6 @@
+//PAGINA DE CONTACTO, SIN BACK PERO SE GUARDA EN LOCALSTPRAGE//
+
 const consultaVal = document.getElementById('enviarConsulta')
-
-
-
-
 
 consultaVal.addEventListener( 'click', () => {
 
@@ -15,5 +13,18 @@ consultaVal.addEventListener( 'click', () => {
     const consulta = document.getElementById('consultaConsulta').value
     localStorage.setItem('consultaEnviar' , document.getElementById('consultaConsulta').value)
     console.log(consulta)
-    window.location.reload()
+    
+    Toastify({
+        text: "Consulta enviada con exito !",
+        duration: 3000,
+        gravity: "bottom",
+        position: `right`,
+        stopOnFocus: true, 
+        style: {
+          background: "#eddc3d",
+        }
+      }).showToast();
+    setTimeout(() => {
+      window.location.reload()
+    }, 3000)
 })

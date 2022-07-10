@@ -607,6 +607,10 @@ article div a:hover {
   text-align: center;
   padding: 20px; }
 
+.testimonial-item {
+  border-style: double;
+  border-color: aliceblue; }
+
 /*footer*/
 footer {
   text-align: center;

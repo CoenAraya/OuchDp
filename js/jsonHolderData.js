@@ -12,7 +12,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${i}`)
   
   <h3 class="bg-primary text-white">Cliente numero ${json.id}</h3>
   <p>
-    "${json.body}"
+    Opinion: "${json.body}"
   </p>
   
 </div>

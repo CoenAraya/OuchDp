@@ -136,7 +136,27 @@ article div a:hover {
   background-color: white;
   color: red;
   font-size: 10px;
+  margin-top: 5px;
 }
+
+.botonera{
+  position: relative;
+  border-radius: 100px;
+  padding: 1px;
+  color: black;
+  background-color: yellow;
+  
+  
+    
+}
+
+.botonera:hover{
+  background-color: blue;
+  color: white;
+  
+}
+
+
 
 .vaciarCarrito{
   border: none;
@@ -149,9 +169,12 @@ article div a:hover {
 .productoEnCarrito{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  
+  
   
 }
+
 
 .precioProducto{
   border-top: 12px;

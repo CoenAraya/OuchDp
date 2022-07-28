@@ -389,7 +389,7 @@ template {
 
 .reparacion {
   text-align: center;
-  min-width: 300px; }
+  min-width: auto; }
 
 /*pags*/
 .gridHome {
@@ -429,7 +429,7 @@ template {
   height: 100vh;
   visibility: hidden;
   opacity: 0;
-  z-index: 5;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,7 +559,19 @@ article div a:hover {
   border: none;
   background-color: white;
   color: red;
-  font-size: 10px; }
+  font-size: 10px;
+  margin-top: 5px; }
+
+.botonera {
+  position: relative;
+  border-radius: 100px;
+  padding: 1px;
+  color: black;
+  background-color: yellow; }
+
+.botonera:hover {
+  background-color: blue;
+  color: white; }
 
 .vaciarCarrito {
   border: none;
@@ -571,7 +583,7 @@ article div a:hover {
 .productoEnCarrito {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: flex-start; }
 
 .precioProducto {
   border-top: 12px;
@@ -640,7 +652,7 @@ footer {
   .gridGalery {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 160px 160px 160px 160px 160px 160px 160px 160px;
+    grid-template-rows: 175px;
     background-color: lightblue;
     opacity: 1;
     border-style: none; }
@@ -673,7 +685,7 @@ footer {
     .gridContainer .saludoNav {
       justify-items: start; }
     .gridContainer .navbar {
-      z-index: 4;
+      z-index: 1;
       display: block;
       opacity: 0.9;
       justify-self: stretch; }
@@ -688,4 +700,17 @@ footer {
   .imgContacto {
     display: none; }
   .logoPage {
-    width: 300px; } }
+    width: 300px; }
+  /* modal*/
+  .modal-carrito {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    min-width: 100px;
+    padding: 5px;
+    margin-top: -100%;
+    transition: all .5s;
+    border-style: groove;
+    border-radius: 10px;
+    border-color: royalblue; } }
